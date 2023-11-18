@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MATTIblue
+namespace mattiBlue
 {
     public class Program
     {

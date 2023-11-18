@@ -1,4 +1,4 @@
-﻿namespace MATTIblue
+﻿namespace mattiBlue
 {
     public partial class MainPage : ContentPage
     {

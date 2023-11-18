@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MATTIblue
+namespace mattiBlue
 {
     [Application]
     public class MainApplication : MauiApplication

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MATTIblue", "MATTIblue\MATTIblue.csproj", "{7890B2D2-7EF9-4BB4-9327-53DD7F8C1D14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mattiBlue", "mattiBlue\mattiBlue.csproj", "{ED55F90C-DF85-4866-B937-C4ED1C3CA85F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,17 +11,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7890B2D2-7EF9-4BB4-9327-53DD7F8C1D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7890B2D2-7EF9-4BB4-9327-53DD7F8C1D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7890B2D2-7EF9-4BB4-9327-53DD7F8C1D14}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7890B2D2-7EF9-4BB4-9327-53DD7F8C1D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7890B2D2-7EF9-4BB4-9327-53DD7F8C1D14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7890B2D2-7EF9-4BB4-9327-53DD7F8C1D14}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ED55F90C-DF85-4866-B937-C4ED1C3CA85F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED55F90C-DF85-4866-B937-C4ED1C3CA85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED55F90C-DF85-4866-B937-C4ED1C3CA85F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ED55F90C-DF85-4866-B937-C4ED1C3CA85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED55F90C-DF85-4866-B937-C4ED1C3CA85F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED55F90C-DF85-4866-B937-C4ED1C3CA85F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F18BD9D9-890A-410F-93CD-2087E1BC7D51}
+		SolutionGuid = {43095D95-C02C-46BD-B1DC-0FE00C66E98B}
 	EndGlobalSection
 EndGlobal
