@@ -9,5 +9,6 @@
 	<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 	<uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
 	<uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
-	<uses-sdk />
+	<uses-sdk android:minSdkVersion="21" />
+
 </manifest>
