@@ -1,3 +1,6 @@
+using mattiBlue.ViewModels;
+using mattiBlue.Services;
+
 namespace mattiBlue.Views;
 
 public partial class ContactsPage : ContentPage
@@ -5,7 +8,9 @@ public partial class ContactsPage : ContentPage
 	public ContactsPage()
 	{
 		InitializeComponent();
-	}
+        IBluetoothProfile bluetoothProfile = new BluetoothProfile();
+        BindingContext = new ContactsViewModel(bluetoothProfile);
+    }
 
     private void Button_Clicked(object sender, EventArgs e)
     {
