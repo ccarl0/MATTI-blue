@@ -6,20 +6,43 @@ namespace mattiBlue.Services
 {
     public class BluetoothProfile : IBluetoothProfile
     {
+        public Task<bool> ConnectToDeviceAsync(BluetoothDevice device)
+        {
+            throw new NotImplementedException();
+        }
+
+        // Other methods
+
         public async Task<List<BluetoothDevice>> ScanForDevicesAsync()
         {
-            // Implement Bluetooth device scanning logic here
-            // Return a list of discovered devices
-            throw new System.NotImplementedException();
-        }
+            var bluetoothAdapter = BluetoothAdapter.DefaultAdapter;
 
-        public async Task<bool> ConnectToDeviceAsync(BluetoothDevice device)
-        {
-            // Implement Bluetooth device connection logic here
-            // Return true if connected successfully, false otherwise
-            throw new System.NotImplementedException();
-        }
+            if (bluetoothAdapter == null || !bluetoothAdapter.IsEnabled)
+            {
+                // Bluetooth is not supported or not enabled
+                return new List<BluetoothDevice>();
+            }
 
-        // Add other methods as needed for your Bluetooth communication
+            var discoveredDevices = new List<BluetoothDevice>();
+
+            // Start discovery
+            bluetoothAdapter.StartDiscovery();
+
+            // Wait for discovery to complete (you might want to add a timeout mechanism)
+            await Task.Delay(5000); // Adjust the delay as needed
+
+            // Get the list of discovered devices
+            var bondedDevices = bluetoothAdapter.BondedDevices;
+            foreach (var device in bondedDevices)
+            {
+                discoveredDevices.Add(device);
+            }
+
+            // Stop discovery (important to conserve resources)
+            bluetoothAdapter.CancelDiscovery();
+
+            return discoveredDevices;
+        }
     }
+
 }

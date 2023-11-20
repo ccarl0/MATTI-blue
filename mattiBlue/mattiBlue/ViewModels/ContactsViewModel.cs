@@ -4,7 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.Input;
+using Android.Support.V4.App;
+using Microsoft.Maui.Essentials;
+using Android.Support.V4.Content;
+
+
 using BluetoothDevice = Android.Bluetooth.BluetoothDevice;
+using Android;
+using Android.Content.PM;
 
 namespace mattiBlue.ViewModels
 {
@@ -23,6 +30,7 @@ namespace mattiBlue.ViewModels
         [RelayCommand]
         private async Task ExecuteScanForDevicesCommand()
         {
+            
             try
             {
                 var scannedDevices = await bluetoothProfile.ScanForDevicesAsync();
@@ -31,8 +39,9 @@ namespace mattiBlue.ViewModels
             catch (Exception ex)
             {
                 // Handle exceptions
-                Console.WriteLine($"Error scanning for devices: {ex.Message}");
-            }
+                await Application.Current.MainPage.DisplayAlert("Error", $"Error: {ex.Message}", "OK");
+            
+        }
         }
 
         [RelayCommand]
