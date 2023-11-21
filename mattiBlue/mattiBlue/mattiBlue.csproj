@@ -50,18 +50,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-		<PackageReference Include="Xamarin.AndroidX.Browser" Version="1.5.0.3" />
-		<PackageReference Include="Xamarin.Android.Support.Compat" Version="28.0.0.3" />
 		<PackageReference Include="Microsoft.Maui.Graphics" Version="8.0.3" />
-		<PackageReference Include="Xamarin.AndroidX.Security.SecurityCrypto" Version="1.1.0.1-alpha06" />
-		<PackageReference Include="Xamarin.Google.Crypto.Tink.Android" Version="1.10.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Views\ContactsPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

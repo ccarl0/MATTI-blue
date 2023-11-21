@@ -1,6 +1,8 @@
-﻿using Microsoft.Maui;
+﻿using Android.Widget;
+using mattiBlue.ViewModel;
+using Microsoft.Maui;
 using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Essentials;
+//using Microsoft.Maui.Essentials;
 
 namespace mattiBlue
 {
@@ -11,27 +13,17 @@ namespace mattiBlue
             var builder = MauiApp.CreateBuilder();
             builder.UseMauiApp<App>();
 
-            EnsurePermissions();
+            builder.Services.AddSingleton<IConnectivity>((e) => Connectivity.Current);
+            //builder.Services.AddSingleton<IToast>((e) => new Toaster());
+
+            builder.Services.AddSingleton<MainViewModel>();
+            //builder.Services.AddTransient<DetailViewModel>();
+
+
+            builder.Services.AddSingleton<MainPage>();
+            //builder.Services.AddTransient<DetailPage>();
 
             return builder.Build();
-        }
-
-        private static void EnsurePermissions()
-        {
-            var neededPermissions = new[]
-            {
-                Permissions.Bluetooth,
-                Permissions.BluetoothConnect,
-                Permissions.BluetoothScan
-            };
-
-            foreach (var permission in neededPermissions)
-            {
-                if (!MauiContext.Current.CheckSelfPermission(permission))
-                {
-                    MauiContext.Current.RequestPermissions(new[] { permission });
-                }
-            }
         }
     }
 }
