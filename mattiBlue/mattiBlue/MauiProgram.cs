@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Android.Widget;
+using mattiBlue.ViewModel;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls.Compatibility;
+//using Microsoft.Maui.Essentials;
 
 namespace mattiBlue
 {
@@ -7,17 +11,17 @@ namespace mattiBlue
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+            builder.UseMauiApp<App>();
 
-#if DEBUG
-		builder.Logging.AddDebug();
-#endif
+            builder.Services.AddSingleton<IConnectivity>((e) => Connectivity.Current);
+            //builder.Services.AddSingleton<IToast>((e) => new Toaster());
+
+            builder.Services.AddSingleton<MainViewModel>();
+            //builder.Services.AddTransient<DetailViewModel>();
+
+
+            builder.Services.AddSingleton<MainPage>();
+            //builder.Services.AddTransient<DetailPage>();
 
             return builder.Build();
         }
